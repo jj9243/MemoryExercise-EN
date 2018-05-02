@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MemoryExercise.iml" filepath="$PROJECT_DIR$/MemoryExercise.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MemoryExercise-EN.iml" filepath="$PROJECT_DIR$/MemoryExercise-EN.iml" />
       <module fileurl="file://C:\Users\Jaena Jang\Documents\GitHub\MemoryExercise\MyApplication.iml" filepath="C:\Users\Jaena Jang\Documents\GitHub\MemoryExercise\MyApplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>

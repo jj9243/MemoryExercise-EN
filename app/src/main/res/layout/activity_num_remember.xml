@@ -21,7 +21,7 @@
         android:layout_marginTop="40dp"
         android:gravity="center_horizontal|center_vertical"
         android:padding="5dp"
-        android:text="Memorize the number"
+        android:text="Remember number"
         android:textSize="40dp"
         android:textStyle="bold" />
 
@@ -55,7 +55,7 @@
         android:layout_marginBottom="30dp"
         android:gravity="center_horizontal|center_vertical"
         android:padding="5dp"
-        android:text="Get Ready! 5"
+        android:text="Questions will be asked\nin 5 seconds"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="30dp"
         android:textStyle="bold"

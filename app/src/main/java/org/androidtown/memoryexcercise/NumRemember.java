@@ -104,7 +104,7 @@ public class NumRemember extends AppCompatActivity {
 //                }
 //                else {
 //                    timerText.setText("숫자를 " + (4 - timerValue) + "초간 잘 기억해 주세요");
-                    countDown.setText("Get Ready! "+(4 - timerValue));
+                    countDown.setText("Questions will be asked\nin "+ (4 - timerValue) + "seconds");
                     timerValue++;
 //                }
 //                if(timerValue==3)
@@ -152,10 +152,10 @@ public class NumRemember extends AppCompatActivity {
     public void dialogShow() {
         //게임 종료 알림
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Finish workout");
+        builder.setTitle("End game");
         builder.setCancelable(false);
-        builder.setMessage("Are you sure you want to quit the game\n(* Game data will be removed)");
-        builder.setPositiveButton("Continue game",
+        builder.setMessage("Would you like to end the game?\n(* Game data will be removed)");
+        builder.setPositiveButton("Next Game",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
 
@@ -163,7 +163,7 @@ public class NumRemember extends AppCompatActivity {
                         immhide.toggleSoftInput(InputMethodManager.SHOW_IMPLICIT, 0);
                     }
                 });
-        builder.setNegativeButton("home",
+        builder.setNegativeButton("Go Home",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         NumRemember.super.onBackPressed();

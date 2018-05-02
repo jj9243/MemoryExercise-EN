@@ -170,7 +170,7 @@ public class Game5Activity extends AppCompatActivity {
     void memoryTest() {
         gameExplain.setVisibility(View.VISIBLE);
         gameExplain.setText("\n" +
-                "Answer\nthe questions below");
+                "Respond to\nthe following question");
 
         textCenter.setVisibility(View.GONE);
 
@@ -219,7 +219,7 @@ public class Game5Activity extends AppCompatActivity {
                                         startActivity(intent);
                                     }
                                 });
-                        builder.setNegativeButton("home",
+                        builder.setNegativeButton("Go Home",
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
                                         if (task != null && task.getStatus() == AsyncTask.Status.RUNNING) {
@@ -236,7 +236,7 @@ public class Game5Activity extends AppCompatActivity {
                         //게임 종료 알림
                         AlertDialog.Builder builder = new AlertDialog.Builder(Game5Activity.this);
                         builder.setCancelable(false);
-                        builder.setTitle("Incorrect");
+                        builder.setTitle("Incorrect!");
                         //builder.setMessage("틀렸습니다.\n(다음문제로 넘어가시겠습니까?)");
                         builder.setPositiveButton("next game",
                                 new DialogInterface.OnClickListener() {
@@ -246,7 +246,7 @@ public class Game5Activity extends AppCompatActivity {
                                         startActivity(intent);
                                     }
                                 });
-                        builder.setNegativeButton("home",
+                        builder.setNegativeButton("Go Home",
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
                                         if (task != null && task.getStatus() == AsyncTask.Status.RUNNING) {
@@ -283,16 +283,16 @@ public class Game5Activity extends AppCompatActivity {
     public void dialogShow() {
         //게임 종료 알림
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Finish workout");
+        builder.setTitle("End game");
         builder.setCancelable(false);
-        builder.setMessage("Are you sure you want to quit the game\n(* Game data will be removed)");
-        builder.setPositiveButton("Continue game",
+        builder.setMessage("Would you like to end the game?\n(* Game data will be removed)");
+        builder.setPositiveButton("next game",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
 
                     }
                 });
-        builder.setNegativeButton("home",
+        builder.setNegativeButton("Go Home",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
 

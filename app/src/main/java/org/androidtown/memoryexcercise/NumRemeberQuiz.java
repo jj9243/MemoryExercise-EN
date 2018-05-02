@@ -126,7 +126,7 @@ public class NumRemeberQuiz extends AppCompatActivity {
                             finish();
                         }
                     });
-            builder.setNegativeButton("home",
+            builder.setNegativeButton("Go Home",
                     new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             stageNumber = 0;
@@ -180,7 +180,7 @@ public class NumRemeberQuiz extends AppCompatActivity {
                             finish();
                         }
                     });
-            builder.setNegativeButton("home",
+            builder.setNegativeButton("Go Home",
                     new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             stageNumber = 0;
@@ -216,17 +216,17 @@ public class NumRemeberQuiz extends AppCompatActivity {
     public void dialogShow() {
         //게임 종료 알림
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Finish workout");
+        builder.setTitle("End game");
         builder.setCancelable(false);
-        builder.setMessage("Are you sure you want to quit the game\n(* Game data will be removed)");
-        builder.setPositiveButton("Continue",
+        builder.setMessage("Would you like to end the game?\n(* Game data will be removed)");
+        builder.setPositiveButton("Next Game",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         InputMethodManager immhide = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
                         immhide.toggleSoftInput(InputMethodManager.SHOW_IMPLICIT, 0);
                     }
                 });
-        builder.setNegativeButton("home",
+        builder.setNegativeButton("Go Home",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         NumRemeberQuiz.super.onBackPressed();

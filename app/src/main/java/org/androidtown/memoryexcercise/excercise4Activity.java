@@ -141,7 +141,7 @@ public class excercise4Activity extends AppCompatActivity {
             @Override
             public void onTick(long millisUntilFinished) {
                 count--;
-                countdown.setText("Get Ready! "+count);
+                countdown.setText("Questions will be asked\nin " + count + " seconds");
             }
 
             @Override
@@ -173,7 +173,7 @@ public class excercise4Activity extends AppCompatActivity {
                         fruit1Answer.setImageResource(R.drawable.answer);
 
                         answerCount++;
-                        countResult.setText("correct(" + answerCount + "/" + answerNumber + ")");
+                        countResult.setText("Fruits found(" + answerCount + "/" + answerNumber + ")");
                         break;
                     }
                 }
@@ -202,7 +202,7 @@ public class excercise4Activity extends AppCompatActivity {
                         fruit2Answer.setImageResource(R.drawable.answer);
 
                         answerCount++;
-                        countResult.setText("correct(" + answerCount + "/" + answerNumber + ")");
+                        countResult.setText("Fruits found(" + answerCount + "/" + answerNumber + ")");
                         break;
                     }
                 }
@@ -231,7 +231,7 @@ public class excercise4Activity extends AppCompatActivity {
                         fruit3Answer.setImageResource(R.drawable.answer);
 
                         answerCount++;
-                        countResult.setText("correct(" + answerCount + "/" + answerNumber + ")");
+                        countResult.setText("Fruits found(" + answerCount + "/" + answerNumber + ")");
                         break;
                     }
                 }
@@ -260,7 +260,7 @@ public class excercise4Activity extends AppCompatActivity {
                         fruit4Answer.setImageResource(R.drawable.answer);
 
                         answerCount++;
-                        countResult.setText("correct(" + answerCount + "/" + answerNumber + ")");
+                        countResult.setText("Fruits found(" + answerCount + "/" + answerNumber + ")");
                         break;
                     }
                 }
@@ -290,7 +290,7 @@ public class excercise4Activity extends AppCompatActivity {
                         fruit5Answer.setImageResource(R.drawable.answer);
 
                         answerCount++;
-                        countResult.setText("correct(" + answerCount + "/" + answerNumber + ")");
+                        countResult.setText("Fruits found(" + answerCount + "/" + answerNumber + ")");
                         break;
                     }
                 }
@@ -321,8 +321,7 @@ public class excercise4Activity extends AppCompatActivity {
                         fruit6Answer.setImageResource(R.drawable.answer);
 
                         answerCount++;
-                        countResult.setText("correct(" + answerCount + "/" + answerNumber + ")");
-
+                        countResult.setText("Fruits found(" + answerCount + "/" + answerNumber + ")");
                         break;
                     }
                 }
@@ -351,7 +350,7 @@ public class excercise4Activity extends AppCompatActivity {
                         fruit7Answer.setImageResource(R.drawable.answer);
 
                         answerCount++;
-                        countResult.setText("correct(" + answerCount + "/" + answerNumber + ")");
+                        countResult.setText("Fruits found(" + answerCount + "/" + answerNumber + ")");
                         break;
                     }
                 }
@@ -380,7 +379,7 @@ public class excercise4Activity extends AppCompatActivity {
                         fruit8Answer.setImageResource(R.drawable.answer);
 
                         answerCount++;
-                        countResult.setText("correct(" + answerCount + "/" + answerNumber + ")");
+                        countResult.setText("Fruits found(" + answerCount + "/" + answerNumber + ")");
                         break;
                     }
                 }
@@ -410,8 +409,7 @@ public class excercise4Activity extends AppCompatActivity {
                         fruit9Answer.setImageResource(R.drawable.answer);
 
                         answerCount++;
-                        countResult.setText("correct(" + answerCount + "/" + answerNumber + ")");
-
+                        countResult.setText("Fruits found(" + answerCount + "/" + answerNumber + ")");
                         break;
                     }
                 }
@@ -493,10 +491,10 @@ public class excercise4Activity extends AppCompatActivity {
         }
         else if(chance == 0)
         {
-            playChance.setText("(This is the last chance.)");
+            playChance.setText("(Last chance)");
         }
         else if(chance > 0)
-            playChance.setText("(Remaining change : " + chance+")" );
+            playChance.setText(chance + " remaining chances)" );
 
         Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         vibrator.vibrate(500);
@@ -519,7 +517,7 @@ public class excercise4Activity extends AppCompatActivity {
                             startActivity(intent);
                         }
                     });
-            builder.setNegativeButton("home",
+            builder.setNegativeButton("Go Home",
                     new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             stageNumber = 0;
@@ -541,7 +539,7 @@ public class excercise4Activity extends AppCompatActivity {
                             startActivity(intent);
                         }
                     });
-            builder.setNegativeButton("home",
+            builder.setNegativeButton("Go Home",
                     new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             stageNumber = 0;
@@ -560,15 +558,15 @@ public class excercise4Activity extends AppCompatActivity {
     public void dialogShow() {
         //게임 종료 알림
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Finish workout");
+        builder.setTitle("End game");
         builder.setCancelable(false);
-        builder.setMessage("Are you sure you want to quit the game\n(* Game data will be removed)");
-        builder.setPositiveButton("Continue game",
+        builder.setMessage("Would you like to end the game?\n(* Game data will be removed)");
+        builder.setPositiveButton("next game",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                     }
                 });
-        builder.setNegativeButton("home",
+        builder.setNegativeButton("Go Home",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         excercise4Activity.super.onBackPressed();

@@ -187,7 +187,7 @@ public class Game2Activity extends AppCompatActivity {
         buttonLayout.setVisibility(View.VISIBLE);
         textView1.setVisibility(View.VISIBLE);
         textView3.setVisibility(View.GONE);
-        textView1.setText("Tap the hidden \nblinking circles");
+        textView1.setText("Find blinking circles");
 
         // 찾은 깜박이 수 표시
         textView4.setVisibility(View.VISIBLE);
@@ -211,7 +211,7 @@ public class Game2Activity extends AppCompatActivity {
                                 buttonArr[buttonIdx].setImageResource(R.drawable.oval2);
                                 isAnswer = true;
                                 ansCnt++;
-                                textView4.setText("correct(" + ansCnt + "/4)");
+                                textView4.setText("Circles found(" + ansCnt + "/4)");
                                 break;
                             } else { // 이미 고른 답을 또 눌렀다면
                                 isAnswer = true;
@@ -223,15 +223,15 @@ public class Game2Activity extends AppCompatActivity {
                         playChance--;
                         startVibrate();
                         if (playChance > 0) {
-                            textView6.setText("(Remaining chance : " + playChance+")");
+                            textView6.setText("(" + playChance + " remaining chances)");
                         } else if (playChance == 0)
-                            textView6.setText("(This is the last chance)");
+                            textView6.setText("(Last chance)");
                         else
                         {
                             //게임 종료 알림
                             AlertDialog.Builder builder = new AlertDialog.Builder(Game2Activity.this);
                             builder.setCancelable(false);
-                            builder.setTitle("incorrect!");
+                            builder.setTitle("Incorrect!");
                             //builder.setMessage("틀렸습니다.\n(다음문제로 넘어가시겠습니까?)");
                             builder.setPositiveButton("next game",
                                     new DialogInterface.OnClickListener() {
@@ -241,7 +241,7 @@ public class Game2Activity extends AppCompatActivity {
                                             startActivity(intent);
                                         }
                                     });
-                            builder.setNegativeButton("home",
+                            builder.setNegativeButton("Go Home",
                                     new DialogInterface.OnClickListener() {
                                         public void onClick(DialogInterface dialog, int which) {
                                             stageNumber = 0;
@@ -270,7 +270,7 @@ public class Game2Activity extends AppCompatActivity {
                                         startActivity(intent);
                                     }
                                 });
-                        builder.setNegativeButton("home",
+                        builder.setNegativeButton("Go Home",
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
                                         stageNumber = 0;
@@ -293,16 +293,16 @@ public class Game2Activity extends AppCompatActivity {
     public void dialogShow() {
         //게임 종료 알림
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Finish workout");
+        builder.setTitle("End game");
         builder.setCancelable(false);
-        builder.setMessage("Are you sure you want to quit the game?\n(* Game data will be removed)");
-        builder.setPositiveButton("Continue game",
+        builder.setMessage("Would you like to end the game?\n(* Game data will be removed)");
+        builder.setPositiveButton("next game",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
 
                     }
                 });
-        builder.setNegativeButton("home",
+        builder.setNegativeButton("Go Home",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         stageNumber = 0;

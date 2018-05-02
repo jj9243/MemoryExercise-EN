@@ -11,7 +11,7 @@
         android:layout_marginTop="40dp"
         android:gravity="center_horizontal|center_vertical"
         android:padding="5dp"
-        android:text="Memorize the picture"
+        android:text="Remember images"
         android:textSize="40dp"
         android:textStyle="bold"
         android:visibility="visible" />
@@ -24,7 +24,7 @@
         android:layout_marginTop="40dp"
         android:gravity="center_horizontal|center_vertical"
         android:padding="5dp"
-        android:text="Answer\nthe questions below"
+        android:text="Respond to the questions below"
         android:textSize="40dp"
         android:textStyle="bold"
         android:visibility="invisible" />
@@ -49,7 +49,7 @@
         android:layout_marginBottom="30dp"
         android:gravity="center_horizontal|center_vertical"
         android:padding="5dp"
-        android:text="Get Ready! 3"
+        android:text="Questions will be asked\nin 3 second"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="30dp"
         android:textStyle="bold" />
@@ -62,7 +62,7 @@
         android:layout_above="@+id/answerLinear"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
-        android:text="Is it the same picture\n you remember?"
+        android:text="Is this image the one\nyou remember?"
         android:textSize="25dp"
         android:textStyle="bold"
         android:layout_marginLeft="20dp"
